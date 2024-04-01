@@ -10,7 +10,7 @@
 <pre>docker-compose up -d
 docker-compose exec backend yii migrate
 open http://localhost:21080
-</pre>pre>
+</pre>
 
 <h4>Structure</h4
 <pre>
