@@ -7,7 +7,9 @@
 </p>
 <h2>Install</h2>
 <h4>Installing using Docker</h4>
-<pre>docker-compose up -d
+<pre>
+composer install    
+docker-compose up -d
 docker-compose exec backend yii migrate
 open http://localhost:21080
 </pre>
@@ -21,6 +23,7 @@ open http://localhost:21080
 </pre>
 <h4>Ntice</h4>
 <p>After creating a book, a job (SubscriberSend) is created to send SMS</p>
+<p>User for test: test/12345678</p>
 
 
 
