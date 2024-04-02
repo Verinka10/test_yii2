@@ -128,7 +128,7 @@ class Book extends \yii\db\ActiveRecord
         ];
     }
 
-    public function actionAddQueueSubscribers()
+    public function addQueueSubscribers()
     {
         // one by phone
         $query = $this->getSubscribers()->select('phone')->distinct();

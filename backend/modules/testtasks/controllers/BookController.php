@@ -89,7 +89,7 @@ class BookController extends Controller
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
-                $model->actionAddQueueSubscribers();
+                $model->addQueueSubscribers();
                 return $this->redirect(['update', 'id' => $model->id]);
             }
         } else {
