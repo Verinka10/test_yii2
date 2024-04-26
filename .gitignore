@@ -51,3 +51,7 @@ protected/runtime/*
 !protected/runtime/.gitignore
 protected/data/*.db
 themes/classic/views/
+
+# main
+backend/web/upload
+XXX_*

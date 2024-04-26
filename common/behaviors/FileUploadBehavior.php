@@ -6,6 +6,7 @@ use yii\db\ActiveRecord;
 use yii\base\Behavior;
 use yii\web\UploadedFile;
 use Yii;
+use yii\helpers\FileHelper;
 
 /**
  * Class FileUploadBehavior
@@ -24,7 +25,7 @@ class FileUploadBehavior extends Behavior
     //public $resizeOptions = [];
     public $file;
     public $url = '@web';
-    public $pref = '{id}';
+    public $pref = '{id}_';
 
 
     public function __construct(array $config = [])
@@ -47,10 +48,18 @@ class FileUploadBehavior extends Behavior
         if ($this->owner->isNewRecord && $this->getPref() != $this->pref) {
             return;
         }
-        
-        $this->file = UploadedFile::getInstance($this->owner, $this->attributeName);
+
+        if ($this->owner->{$this->attributeName} instanceof UploadedFile) {
+            $this->file = $this->owner->{$this->attributeName};
+        } else {
+            $this->file = UploadedFile::getInstance($this->owner, $this->attributeName);
+        }
 
         if ($this->file instanceof UploadedFile) {
+            $directory = dirname($this->getPathName($this->file->name));
+            if (!is_dir($directory)) {
+                FileHelper::createDirectory($directory);
+            }
             if ($this->file->saveAs($this->getPathName($this->file->name))) {
                 $this->owner->{$this->attributeName} = $this->file->name;
             }

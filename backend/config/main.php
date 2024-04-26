@@ -15,6 +15,9 @@ return [
         'testtasks' => [
             'class' => 'app\modules\testtasks\Module',
          ],
+        'photobank' => [
+            'class' => 'app\modules\photobank\Module',
+        ],
     ],
     'components' => [
         'request' => [

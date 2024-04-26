@@ -37,9 +37,7 @@ AppAsset::register($this);
     ]);
     $menuItems = [
        // ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'Photobank upload', 'url' => ['/photobank/default/upload']],
-        ['label' => 'Photobank list', 'url' => ['/photobank/default/index']],
-        ['label' => 'Photobank api', 'url' => ['/photobank/default/test-api']],
+        ['label' => 'Book report', 'url' => ['/testtasks/author/index']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];

@@ -6,4 +6,7 @@ return [
     'senderName' => 'Example.com mailer',
     'user.passwordResetTokenExpire' => 3600,
     'user.passwordMinLength' => 8,
+    //
+    'typeImage' => 'jpg,jpeg,png,gif',
+    'uploadMaxFileSize' => 10000000,
 ];

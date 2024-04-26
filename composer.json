@@ -16,7 +16,6 @@
     "require": {
         "php": ">=8.0.0",
         "yiisoft/yii2": "~2.0.45",
-        "yiisoft/yii2-bootstrap5": "*",
         "yiisoft/yii2-symfonymailer": "~2.0.3",
         "ezyang/htmlpurifier": "^4.17",
         "kartik-v/yii2-widget-select2": "dev-master",
@@ -25,7 +24,10 @@
         "voskobovich/yii2-linker-behavior": "^4.0",
         "mohorev/yii2-upload-behavior": "*",
         "yiisoft/yii2-queue": "^2.3",
-        "guzzlehttp/guzzle": "^7.8"
+        "guzzlehttp/guzzle": "^7.8",
+        "2amigos/yii2-file-upload-widget": "~1.0",
+        "2amigos/yii2-transliterator-helper": "^1.0",
+        "yiisoft/yii2-imagine": "^2.3"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
