@@ -40,8 +40,8 @@ class m240329_154056_report_book extends Migration
             'author_id' => $this->integer(),
         ]);
 
-        $this->addForeignKey('fk__book_to_author__book_id', 'book_to_author', 'book_id', 'book', 'id', "CASCADE");
-        $this->addForeignKey('fk__book_to_author__author_id', 'book_to_author', 'author_id', 'author', 'id', "CASCADE");
+        //$this->addForeignKey('fk__book_to_author__book_id', 'book_to_author', 'book_id', 'book', 'id', "CASCADE");
+        //$this->addForeignKey('fk__book_to_author__author_id', 'book_to_author', 'author_id', 'author', 'id', "CASCADE");
         
         $this->createTable('subscriber_author', [
             'id' => $this->primaryKey(),
@@ -52,8 +52,8 @@ class m240329_154056_report_book extends Migration
             'updated_at' =>  $this->timestamp(),
         ]);
 
-        $this->createIndex('fk__subscriber_author__unique_author_id_phone', 'subscriber_author', ['author_id', 'phone']);
-        $this->addForeignKey('fk__subscriber_author__author_id', 'subscriber_author', 'author_id', 'author', 'id');
+        //$this->createIndex('fk__subscriber_author__unique_author_id_phone', 'subscriber_author', ['author_id', 'phone']);
+        //$this->addForeignKey('fk__subscriber_author__author_id', 'subscriber_author', 'author_id', 'author', 'id');
 
         //test user
         $this->db->createCommand("

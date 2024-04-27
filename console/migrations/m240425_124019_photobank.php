@@ -24,7 +24,7 @@ class m240425_124019_photobank extends Migration
             'created_user_id' => $this->integer(),
         ]);
         
-        $this->addForeignKey(
+        /*$this->addForeignKey(
             'fk_photobank_updated_user_id',
             'photobank',
             'updated_user_id',
@@ -42,7 +42,7 @@ class m240425_124019_photobank extends Migration
             'id',
             "SET NULL",
             "SET NULL"
-        );
+        );*/
 
     }
 

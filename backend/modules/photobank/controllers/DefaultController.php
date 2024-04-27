@@ -154,6 +154,7 @@ class DefaultController extends Controller
 
     public function actionUpload()
     {
+        
         $model = new PhotobankForm();
         if ($this->request->isPost) {
 
@@ -167,6 +168,7 @@ class DefaultController extends Controller
                 }
             }
             \Yii::$app->session->setFlash('success', 'Ok');
+            return $this->refresh();
         }
         return $this->render('upload', ['model' => $model]);
     }

@@ -1,5 +1,5 @@
 <?php
-namespace common\queues;
+namespace common\components\jobs;
 
 use yii\base\BaseObject;
 use yii\helpers\Console;
