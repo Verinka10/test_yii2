@@ -8,8 +8,9 @@
 <h2>Install</h2>
 <h4>Installing using Docker</h4>
 <pre>
-composer install    
-docker-compose up -d
+docker-compose up --build -d
+docker-compose exec backend composer install
+docker-compose exec backend init --env=Development --overwrite=n
 docker-compose exec backend yii migrate
 open http://localhost:21080
 </pre>
